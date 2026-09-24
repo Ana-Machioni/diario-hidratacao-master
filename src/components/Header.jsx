@@ -17,23 +17,40 @@ export function Header({ goal}) {
 }
 
 const styles = StyleSheet.create({
-
-  container: {
+  card: {
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 16,
+    padding: 20,
+    width: '100%',
     alignItems: 'center',
     marginBottom: 24,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
-
-  title: {
-    fontSize: 22,
+  consumedText: {
+    fontSize: 36,
     fontWeight: 'bold',
-    color: COLORS.primary ,
+    color: COLORS.primary,
   },
-
-  subtitle: {
+  percentageText: {
     fontSize: 14,
     color: COLORS.textMuted,
-    marginTop: 4,
+    marginBottom: 16,
   },
-
+  progressBarBackground: {
+    width: '100%',
+    height: 12,
+    backgroundColor: '#E0F2FE',
+    borderRadius: 6,
+    overflow: 'hidden',
+  },
+  progressBarFill: {
+    height: '100%',
+    backgroundColor: COLORS.secondary,
+    borderRadius: 6,
+  },
 });
 

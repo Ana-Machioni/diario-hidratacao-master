@@ -9,9 +9,10 @@ export function WaterProgress({ consumido = 666, objetivo = 2000 }) {
       <Text>Você atingiu {porcentagem}% da Meta.</Text>
       
       {/* Barra de Progresso */}
-      <View style={{ width: '100%', height: 30, backgroundColor: 'red' }}>
-        <View style={{ width: `${porcentagem}%`, height: '100%', backgroundColor: 'green', width: `${porcentagem}` }} />
+       <View style={styles.progressBarBackground}>
+        <View style={[styles.progressBarFill, { width: `${porcentagem}%` }]} />
       </View>
+
     </View>
   );
 }
