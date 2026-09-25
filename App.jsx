@@ -17,10 +17,10 @@ export default function App(){
       <View>
 
         <Header goal={GOAL}/>
-        <WaterProgress consumido={1000} goal={GOAL}/>
+        <WaterProgress consumed={200} goal={GOAL}/>
+
       </View>
       </SafeAreaView>
     </SafeAreaProvider>
   )
 }
-

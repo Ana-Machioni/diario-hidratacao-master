@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import COLORS from "../constants/colors";
 
 
-export function Header({ goal}) {
+export function Header({ goal }) {
 
   return (
 
@@ -17,40 +17,18 @@ export function Header({ goal}) {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: COLORS.cardBg,
-    borderRadius: 16,
-    padding: 20,
-    width: '100%',
+  container: {
     alignItems: 'center',
     marginBottom: 24,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
   },
-  consumedText: {
-    fontSize: 36,
+  title: {
+    fontSize: 22,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textMain,
   },
-  percentageText: {
+  subtitle: {
     fontSize: 14,
     color: COLORS.textMuted,
-    marginBottom: 16,
-  },
-  progressBarBackground: {
-    width: '100%',
-    height: 12,
-    backgroundColor: '#E0F2FE',
-    borderRadius: 6,
-    overflow: 'hidden',
-  },
-  progressBarFill: {
-    height: '100%',
-    backgroundColor: COLORS.secondary,
-    borderRadius: 6,
+    marginTop: 4,
   },
 });
-
