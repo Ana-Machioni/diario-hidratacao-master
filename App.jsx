@@ -3,21 +3,29 @@ import { useState } from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Header } from './src/components/Header';
 import { WaterProgress } from './src/components/WaterProgress';
+import { AjustarMeta } from "./src/components/MetaProgress";
 import { Buttons } from './src/components/ActionButtons';
+import { Mensagem } from "./src/components/mensagem";
 
 
 export default function App() {
-  const GOAL = 2000
 
   const [consumed, setConsumed] = useState(0)
+
+  const [GOAL, setGoal] = useState(2000)
 
   const addAgua = ( acrescimo ) => {
     setConsumed(consumed + acrescimo);
   };
 
-  const handleReset = () => {
-    setConsumed(0)
-  }
+  const adcMeta = (addMeta) => {
+    setGoal((prevGoal) => prevGoal + addMeta);
+  
+  };
+
+  const resetAgua = () => {
+    setConsumed(0);
+  };
 
   return (
     <SafeAreaProvider>
@@ -26,9 +34,18 @@ export default function App() {
         <View>
 
           <Header goal={GOAL} />
+
+          <AjustarMeta goal={GOAL} AddMeta={adcMeta} />
+
           <WaterProgress consumed={consumed} goal={GOAL} />
 
-          <Buttons onAdd={addAgua} onReset={handleReset}/>
+          <Buttons onAdd={addAgua} onReset={resetAgua}/>
+
+
+          <Mensagem/>
+
+
+
 
         </View>
       </SafeAreaView>

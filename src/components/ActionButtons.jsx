@@ -43,9 +43,7 @@ export function Buttons({ onAdd, onReset }) {
 
             </View>
 
-            <Pressable style={styles.resetButton}>
-
-                onPress={onReset}
+            <Pressable style={styles.resetButton} onPress={onReset}>
                 <Text>RESETAR</Text>
 
             </Pressable>

@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import COLORS from "../constants/colors";
 
 
-export function AumentarMeta({ goal, AdcMeta }) {
+export function AjustarMeta({ goal, AddMeta }) {
 
     return (
 
@@ -15,13 +15,13 @@ export function AumentarMeta({ goal, AdcMeta }) {
 
                 <View style={styles.buttonRow}>
 
-                    <Pressable style={styles.button} onPress={() => AdcMeta(250)}>
+                    <Pressable style={styles.button} onPress={() => AddMeta(-250)}>
 
                         <Text> - 250 ml</Text>
 
                     </Pressable>
 
-                    <Pressable style={styles.button} onPress={() => AdcMeta(250)}>
+                    <Pressable style={styles.button} onPress={() => AddMeta(250)}>
 
                         <Text> + 250 ml</Text>
 

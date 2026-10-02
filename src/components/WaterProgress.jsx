@@ -10,7 +10,7 @@ export function WaterProgress({ consumed, goal}) {
 
     <View style={styles.card}>
 
-      <Text style={styles.consumedText}    > {consumed}  ML </Text>
+      <Text style={styles.consumedText}    > Você bebeu {consumed}  ML </Text>
       <Text style={styles.percentageText} > Você atingiu {porcentagem}% da Meta               </Text>
 
       {/* {BARRA AZUL} */}
